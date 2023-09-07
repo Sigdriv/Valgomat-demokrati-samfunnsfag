@@ -3,3 +3,56 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.divLinkValgomat {
+    margin: 0 auto;
+    margin-top: 30em;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    width: 50%;
+}
+
+#linkValgomat {
+    text-decoration: none;
+    color: black;
+    margin: 2em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.divSporsmal {
+    margin: 0 auto;
+    margin-top: 23em;
+    background-color: lightgrey;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.divSporsmal h2{
+    text-align: center;
+    margin: 1em;
+}
+
+.divSporsmal h1{
+    text-align: center;
+    margin: 1em;
+}
+
+.buttonDiv {
+    text-align: center;
+}
+
+button {
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: .5em;
+    text-align: center;
+    background-color: #bababa;
+    border-radius: 5px;
+    border: none;
+    padding: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 10px 10px 5px grey;
+}
