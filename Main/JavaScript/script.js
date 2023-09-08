@@ -14,13 +14,9 @@ const antallSporsmal = sporsmal.length;
 let randomSporsmal = 0;
 let sporsmalNummer = 0;
 let tempsvar = 0;
-let svar = 0;
+let svar = 2;
 let prevButton = null;
-let apSinScore = 0;
-
-apSinScore = sporsmal.length * 4;
-
-console.log(apSinScore);
+let apSinScore = sporsmal.length * 4;
 
 function button(button) {
     if (prevButton != null) {
@@ -30,9 +26,7 @@ function button(button) {
     prevButton = button;
     tempsvar = button.value;
     console.log(tempsvar);
-}
-
-document.getElementById('antallSporsmal').innerHTML = 'Spøsrmål ' + sporsmalNummer + '/' + antallSporsmal;
+};
 
 console.log(sporsmal);
 
@@ -57,7 +51,7 @@ function nesteSporsmal(button) {
         //wait 5 seconds before redirecting
         setTimeout(function () {
 
-         window.location.href = ("svar.html");
+         window.location.href = ("/Main/HTML/svar.html");
 
         }, 5000);
     }
@@ -67,8 +61,19 @@ function nesteSporsmal(button) {
     console.log('test')
 
     sporsmal.splice(randomSporsmal, 1);
+};
 
-    console.log(sporsmal);
-}
+function svarSide() {
+     let enighet = svar / apSinScore * 100;
+    
+     document.getElementById('prosentEnighet').innerHTML = 'Du er ' + enighet + '% enig med Arbeiderpartiet';
 
-window.onload = nesteSporsmal();
+     console.log(enighet);
+
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Call your functions here once the DOM is fully loaded
+    nesteSporsmal();
+    svarSide();
+});
