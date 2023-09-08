@@ -15,18 +15,34 @@ let randomSporsmal = 0;
 let sporsmalNummer = 0;
 let tempsvar = 0;
 let svar = 0;
+let prevButton = null;
+let apSinScore = 0;
+
+apSinScore = sporsmal.length * 4;
+
+console.log(apSinScore);
 
 function button(button) {
+    if (prevButton != null) {
+        prevButton.style.backgroundColor = "white";
+    }
     button.style.backgroundColor = "green";
+    prevButton = button;
+    tempsvar = button.value;
+    console.log(tempsvar);
 }
 
 document.getElementById('antallSporsmal').innerHTML = 'Spøsrmål ' + sporsmalNummer + '/' + antallSporsmal;
 
 console.log(sporsmal);
 
-function nesteSporsmal() {
+function nesteSporsmal(button) {
 
     randomSporsmal = Math.floor(Math.random() * sporsmal.length);
+    if (prevButton != null) {
+        prevButton.style.backgroundColor = "white";
+    }
+    prevButton = button;
 
     if (sporsmal.length > 0) {
         sporsmalNummer++;
@@ -34,8 +50,9 @@ function nesteSporsmal() {
         document.getElementById("sporsmal").innerHTML = sporsmal[randomSporsmal];
         document.getElementById('antallSporsmal').innerHTML = 'Spørsmål ' + sporsmalNummer + '/' + antallSporsmal;
     } else {
-        document.getElementById("sporsmal").innerHTML = 'Du har svart på alle spørsmålene! Du blir videresent videre når vi har regnet sammen svarene dine.';
+        document.getElementById("sporsmal").innerHTML = 'Du har svart på alle spørsmålene! Du blir videresent når vi har regnet sammen svarene dine.';
         document.getElementById('antallSporsmal').innerHTML = 'Spørsmål ' + sporsmalNummer + '/' + antallSporsmal;
+        document.getElementsByClassName('buttonDiv')[0].remove();
 
         //wait 5 seconds before redirecting
         setTimeout(function () {
@@ -45,6 +62,8 @@ function nesteSporsmal() {
         }, 5000);
     }
 
+    svar += parseInt(tempsvar);
+    console.log(svar);
     console.log('test')
 
     sporsmal.splice(randomSporsmal, 1);
