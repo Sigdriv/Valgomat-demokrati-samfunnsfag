@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title id="titleSporsmal">Spørmål 1</title>
     <link rel="stylesheet" href="../CSS/main.css">
 </head>
 <body>
     <div class="divSporsmal">
-        <h2>Spørsmål 1/?</h2>
-        <h1>Bør abort være tillat?</h1>
+        <h2 id="antallSporsmal">Spørsmål 1/?</h2>
+        <h1 id="sporsmal">Bør det være gratis høyere utdanning?</h1>
         <div class="buttonDiv">
-            <button>Enig</button>
-            <button>Delvis enig</button>
-            <button>Nøytral</button>
-            <button>Delvis uenig</button>
-            <button>Uenig</button>
+            <button id="svar" onclick="button(this)">Enig</button>
+            <button id="svar">Delvis enig</button>
+            <button id="svar">Nøytral</button>
+            <button id="svar">Delvis uenig</button>
+            <button id="svar">Uenig</button>
+        </div>
+        <div class="nextDiv">
+            <button id="nextButton" onclick="nesteSporsmal()">Neste</button>
+            <!-- <a href="svar.html">Se ditt svar her nå</a> -->
         </div>
     </div>
     <script src="../JavaScript/script.js"></script>
