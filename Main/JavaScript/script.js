@@ -14,7 +14,7 @@ const antallSporsmal = sporsmal.length;
 let randomSporsmal = 0;
 let sporsmalNummer = 0;
 let tempsvar = 0;
-let svar = 2;
+let svar = 0;
 let prevButton = null;
 let apSinScore = sporsmal.length * 4;
 
@@ -51,7 +51,7 @@ function nesteSporsmal(button) {
         //wait 5 seconds before redirecting
         setTimeout(function () {
 
-         window.location.href = ("/Main/HTML/svar.html");
+         window.location.href = ("./svar.html");
 
         }, 5000);
     }
@@ -61,9 +61,12 @@ function nesteSporsmal(button) {
     console.log('test')
 
     sporsmal.splice(randomSporsmal, 1);
+    localStorage.setItem("lagretSvar", svar)
 };
 
 function svarSide() {
+    svar = localStorage.getItem("lagretSvar")
+    console.log(svar)
      let enighet = svar / apSinScore * 100;
     
      document.getElementById('prosentEnighet').innerHTML = 'Du er ' + enighet + '% enig med Arbeiderpartiet';
@@ -71,9 +74,14 @@ function svarSide() {
      console.log(enighet);
 
 };
-
 document.addEventListener("DOMContentLoaded", function () {
     // Call your functions here once the DOM is fully loaded
-    nesteSporsmal();
-    svarSide();
+    if(window.location.pathname == "/Main/HTML/valgomat.html" ){
+        nesteSporsmal();
+
+    }
+    else if(window.location.pathname == "/Main/HTML/svar.html"){
+        svarSide();
+    }
+    console.log("loaded")
 });
