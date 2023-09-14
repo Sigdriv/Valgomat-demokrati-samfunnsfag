@@ -10,6 +10,22 @@ let sporsmal = [
 
 ]
 
+let forArgumenter = [
+    'Kvinner bør ha rett til å bestemme over sin egen kropp og helse,  inkludert retten til å avslutte en uønsket graviditet.',
+    2,
+    3,
+    4
+]
+
+let motArgumenter = [
+    1,
+    2,
+    3,
+    4
+];
+
+let svarArray = [];
+
 const antallSporsmal = sporsmal.length;
 let randomSporsmal = 0;
 let sporsmalNummer = 0;
@@ -43,6 +59,8 @@ function nesteSporsmal(button) {
         document.getElementById("titleSporsmal").innerHTML = 'Spørsmål ' + sporsmalNummer + '/' + antallSporsmal;
         document.getElementById("sporsmal").innerHTML = sporsmal[randomSporsmal];
         document.getElementById('antallSporsmal').innerHTML = 'Spørsmål ' + sporsmalNummer + '/' + antallSporsmal;
+        document.getElementById('forArgumenter').innerHTML = forArgumenter[randomSporsmal];
+        document.getElementById('motArgumenter').innerHTML = motArgumenter[randomSporsmal];
     } else {
         document.getElementById("sporsmal").innerHTML = 'Du har svart på alle spørsmålene! Du blir videresent når vi har regnet sammen svarene dine.';
         document.getElementById('antallSporsmal').innerHTML = 'Spørsmål ' + sporsmalNummer + '/' + antallSporsmal;
@@ -53,7 +71,7 @@ function nesteSporsmal(button) {
 
          window.location.href = ("./svar.html");
 
-        }, 5000);
+        }, 3000);
     }
 
     svar += parseInt(tempsvar);
@@ -62,6 +80,7 @@ function nesteSporsmal(button) {
 
     sporsmal.splice(randomSporsmal, 1);
     localStorage.setItem("lagretSvar", svar)
+
 };
 
 function svarSide() {

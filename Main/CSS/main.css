@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .divLinkValgomat {
-    position: absolute;
+    
+    margin: 1em;
+    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -23,8 +26,8 @@
 }
 
 .divSporsmal {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    margin-top: 25em;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #d3d3d3;
@@ -80,4 +83,52 @@
     font-size: 1.5em;
     cursor: pointer;
     box-shadow: 10px 10px 5px grey;
+}
+
+.forOgMotArgumenterDiv {
+    position: relative;
+    border: 2em;
+    margin-top:1em;
+    top: 300%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    width: 55%;
+}
+
+#argumenter {
+    text-align: center;
+    margin: 1em;
+}
+
+#forArgumenteOverskrift {
+    text-align: center;
+    margin: 1em;
+}
+
+#forArgumenter {
+    text-align: center;
+    margin: .5em;
+}
+
+#motArgumenteOverskrift {
+    text-align: center;
+    margin: 1em;
+}
+
+#motArgumenter {
+    text-align: center;
+    margin: .5em;
+}
+
+#forOgMotArgumenterLink {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    scroll-behavior: smooth;
+    margin: .5em;
+    text-align: center;
+    font-size: 1.5em;
+    
 }
