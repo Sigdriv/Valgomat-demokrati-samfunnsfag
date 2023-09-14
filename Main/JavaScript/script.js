@@ -8,17 +8,18 @@ let sporsmal = [
     'Bør det være mer satsing på fornybar energi?',
     'Bør det være økt satsing på skolemat for å sikre sunn ernæring for skolebarn?'
 
-]
+
+];
 
 let forArgumenter = [
-    'Kvinner bør ha rett til å bestemme over sin egen kropp og helse,  inkludert retten til å avslutte en uønsket graviditet.',
+    'Kvinner bør ha rett til å bestemme over sin egen kropp og helse, inkludert retten til å avslutte en uønsket graviditet.',
     2,
     3,
     4
 ]
 
 let motArgumenter = [
-    1,
+    'Fosteret har rett til liv og det er umoralsk å avslutte en graviditet fordi det innebærer å ta livet av et uskyldig menneske.',
     2,
     3,
     4
@@ -38,7 +39,7 @@ function button(button) {
     if (prevButton != null) {
         prevButton.style.backgroundColor = "white";
     }
-    button.style.backgroundColor = "green";
+    button.style.backgroundColor = "#A8DF8E";
     prevButton = button;
     tempsvar = button.value;
     console.log(tempsvar);
@@ -61,12 +62,14 @@ function nesteSporsmal(button) {
         document.getElementById('antallSporsmal').innerHTML = 'Spørsmål ' + sporsmalNummer + '/' + antallSporsmal;
         document.getElementById('forArgumenter').innerHTML = forArgumenter[randomSporsmal];
         document.getElementById('motArgumenter').innerHTML = motArgumenter[randomSporsmal];
-    } else {
+    }
+    
+    else {
         document.getElementById("sporsmal").innerHTML = 'Du har svart på alle spørsmålene! Du blir videresent når vi har regnet sammen svarene dine.';
         document.getElementById('antallSporsmal').innerHTML = 'Spørsmål ' + sporsmalNummer + '/' + antallSporsmal;
         document.getElementsByClassName('buttonDiv')[0].remove();
 
-        //wait 5 seconds before redirecting
+        //wait 3 seconds before redirecting
         setTimeout(function () {
 
          window.location.href = ("./svar.html");

@@ -6,15 +6,13 @@
 }
 
 .divLinkValgomat {
-    
-    margin: 1em;
-    display: block;
-    top: 50%;
+    position: relative;
+    margin-top: 25em;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #d3d3d3;
     border-radius: 5px;
-    width: 50%;
+    width: 55%;
 }
 
 #linkValgomat {
@@ -31,7 +29,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #d3d3d3;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 55%;
 }
 
@@ -42,7 +40,8 @@
 
 .divSporsmal h1{
     text-align: center;
-    margin: 1em;
+    margin: 1em 1em 0em 1em;
+    padding: 5% 0 5% 0;
 }
 
 .buttonDiv {
@@ -50,6 +49,7 @@
 }
 
 #svar {
+    color: black;
     margin: 0 auto;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -70,11 +70,10 @@
 }
 
 #nextButton {
+    color: black;
     margin: 0 auto;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: .5em;
-    margin-right: .5em;
     text-align: center;
     background-color: white;
     border-radius: 50px;
@@ -109,7 +108,7 @@
 
 #forArgumenter {
     text-align: center;
-    margin: .5em;
+    margin: .5em 1em .5em 1em;
 }
 
 #motArgumenteOverskrift {
@@ -119,16 +118,19 @@
 
 #motArgumenter {
     text-align: center;
-    margin: .5em;
+    margin: .5em 1em .5em 1em;
+    padding-bottom: 1em;
+}
+
+.forOgMotArgumentDivLink{
+    text-align: center;
+    margin: 1em;
 }
 
 #forOgMotArgumenterLink {
-    position: relative;
     text-decoration: none;
     color: black;
-    scroll-behavior: smooth;
     margin: .5em;
-    text-align: center;
-    font-size: 1.5em;
+    font-size: 1.25em;
     
 }
