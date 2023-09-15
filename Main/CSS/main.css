@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+#boody{
+    background-image: url("Gustav.jpg");
+}
+
 .divLinkValgomat {
   position: relative;
   margin-top: 25em;
