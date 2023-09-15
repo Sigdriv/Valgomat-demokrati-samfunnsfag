@@ -2,11 +2,18 @@ let sporsmal = [
   "Bør abort være tillat?",
   "Synes du det er rettferdig at folk som tjener mer penger, betaler mer skatt?",
   "Bør staten investere mer i utdanning og skole?",
-  "Bør det være gratis høyere utdanning?",
+  "Bør det være gratis høyere utdanning",
   "Bør det være mer satsing på kollektivtransport?",
   "Bør det være mer statlig støtte til småbedrifter og entreprenørskap?",
   "Bør det være mer satsing på fornybar energi?",
   "Bør det være økt satsing på skolemat for å sikre sunn ernæring for skolebarn?",
+  "Bør det være økt satsing på reiselivsnæringen for å fremme turisme?",
+  "Bør det være mer fokus på inkludering og tilrettelegging for personer med nedsatt funksjonsevne?",
+  "Bør det være strengere regulering av internett og personvern på nettet?",
+  "Bør det være mer satsing på rehabilitering og behandling av rusmisbrukere?",
+  "Bør det være mer statlig støtte til idrett og fritidsaktiviteter for barn og unge?",
+  "Bør det være økt satsing på landbruk og matsikkerhet?",
+  "Bør det være mer fokus på psykisk helse i helsetjenesten?",
 ];
 
 let forArgumenter = [
@@ -28,7 +35,7 @@ let sporsmalNummerArray = [];
 let svarArray = [];
 
 const antallSporsmal = sporsmal.length;
-let randomSporsmal = 0;
+let randomSporsmalNummer = 0;
 let sporsmalNummer = 0;
 let svar = 0;
 let prevButton = null;
@@ -41,9 +48,23 @@ const antallSporsmalText = document.getElementById("antallSporsmal");
 const forArgumenterText = document.getElementById("forArgumenter");
 const motArgumenterText = document.getElementById("motArgumenter");
 
-for (let j = 0; j < sporsmal.length; j++) {
-  randomSporsmal = Math.floor(Math.random() * sporsmal.length);
-  sporsmalNummerArray.push(randomSporsmal);
+function randomSporsmal() {
+  nummer = Math.floor(Math.random() * sporsmal.length);
+  return nummer;
+}
+
+while (sporsmalNummerArray.length < sporsmal.length) {
+  randomSporsmal();
+  sjekkRandom();
+  function sjekkRandom() {
+    if (sporsmalNummerArray.includes(nummer)) {
+      randomSporsmal();
+      sjekkRandom();
+    } else {
+      sporsmalNummerArray.push(nummer);
+      console.log(sporsmalNummerArray);
+    }
+  }
 }
 
 function button(button) {
@@ -60,7 +81,7 @@ function button(button) {
 
   if (button.value == 2) {
     if (nøytralButton == 3) {
-      alert("Du kan ikke svare nøytralt på mer enn 3 av spørsmålene");
+      alert("Husk at du kan ikke svare nøytralt på mer enn 3 av spørsmålene");
       document.getElementsByClassName("noytralButton")[0].disabled = true;
     }
   }
@@ -74,8 +95,6 @@ function nesteSporsmal(button) {
 
   if (sporsmalNummer < sporsmal.length) {
     sporsmalNummer++;
-    titleSporsmal.innerHTML =
-      "Spørsmål " + sporsmalNummer + "/" + antallSporsmal;
     sporsmalText.innerHTML = sporsmal[sporsmalNummerArray[sporsmalNummer - 1]];
     antallSporsmalText.innerHTML =
       "Spørsmål " + sporsmalNummer + "/" + antallSporsmal;
@@ -84,9 +103,9 @@ function nesteSporsmal(button) {
     motArgumenterText.innerHTML =
       motArgumenter[sporsmalNummerArray[sporsmalNummer - 1]];
 
-      if (nøytralButton < 3) {
-        document.getElementsByClassName("noytralButton")[0].disabled = false;
-      }
+    if (nøytralButton < 3) {
+      document.getElementsByClassName("noytralButton")[0].disabled = false;
+    }
   } else {
     sporsmalText.innerHTML =
       "Du har svart på alle spørsmålene! Du blir videresent når vi har regnet sammen svarene dine.";
@@ -111,8 +130,6 @@ function nesteSporsmal(button) {
 function tilbakeSporsmal() {
   if (sporsmalNummer > 1) {
     sporsmalNummer--;
-    titleSporsmal.innerHTML =
-      "Spørsmål " + sporsmalNummer + "/" + antallSporsmal;
     sporsmalText.innerHTML = sporsmal[sporsmalNummerArray[sporsmalNummer - 1]];
     antallSporsmalText.innerHTML =
       "Spørsmål " + sporsmalNummer + "/" + antallSporsmal;

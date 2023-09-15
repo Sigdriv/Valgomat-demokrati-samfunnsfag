@@ -5,8 +5,8 @@
   scroll-behavior: smooth;
 }
 
-#boody{
-    background-image: url("Gustav.jpg");
+body {
+  background-image: url("Gustav.jpg");
 }
 
 .divLinkValgomat {
@@ -149,4 +149,16 @@
   color: black;
   margin: 0.5em;
   font-size: 1.25em;
+}
+
+#prosentEnighetDiv {
+    text-align: center;
+    margin-top: 20em ;
+    padding: 1em;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    width: 55%;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
 }
