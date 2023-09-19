@@ -92,9 +92,9 @@ while (sporsmalNummerArray.length < sporsmal.length) {
 
 function button(button) {
   if (prevButton != null) {
-    prevButton.style.backgroundColor = "white";
+    prevButton.style.backgroundColor = "#FFC4C4";
   }
-  button.style.backgroundColor = "#A8DF8E";
+  button.style.backgroundColor = "#ADD8E6";
   prevButton = button;
 
   svarArray[sporsmalNummer - 1] = parseInt(button.value);
@@ -114,7 +114,7 @@ function button(button) {
 
 function nesteSporsmal(button) {
   if (prevButton != null) {
-    prevButton.style.backgroundColor = "white";
+    prevButton.style.backgroundColor = "#FFC4C4";
   }
   prevButton = button;
 

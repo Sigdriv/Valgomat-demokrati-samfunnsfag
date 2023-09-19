@@ -12,7 +12,6 @@
 }
 
 .navBar{
-  
   margin: 1em;
   top: 0px;
 }
@@ -29,37 +28,109 @@ img {
 
 #pictureLi {
   float: left;
+  position: fixed;
 }
 
 li #omOss {
   padding-top: 7%;
 }
 
-#omOss {
+#valgomat {
   margin: 1em 1em 0 0;
   text-decoration: none;
   color: #d70926;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
   text-align: center;
 }
 
-.divLinkValgomat {
-  position: relative;
-  margin-top: 25em;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #d3d3d3;
-  border-radius: 5px;
-  width: 55%;
+#omOss {
+  margin: 1em 1em 0 0;
+  text-decoration: none;
+  color: #fff7e8;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
 }
 
-#linkValgomat {
-  text-decoration: none;
-  color: black;
-  margin: 2em;
-  text-align: center;
-  font-size: 1.5em;
+.content1 {
+  background-color:rgba(255,255,255,.3);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:35%;
+  padding:10vmin;
+  position:fixed;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+.content2 {
+  background-color:rgba(255,255,255,.3);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:65%;
+  padding:10vmin;
+  position:fixed;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(255,255,255,.3);
+  }
+  to {
+    background-color: rgba(255,255,255);
+  }
+}
+
+@keyframes fadeInColor {
+  from {
+    background-color: rgba(255,255,255,.3);
+    color: #fff7e8;
+  }
+  to {
+    background-color: rgba(255,255,255);
+    color: #d70926;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    background-color: rgba(255,255,255);
+  }
+  to {
+    background-color: rgba(255,255,255,.3);
+  }
+}
+
+@keyframes fadeOutColor {
+  from {
+    background-color: rgba(255,255,255);
+    color: #d70926;
+  }
+  to {
+    background-color: rgba(255,255,255,.3);
+    color: #fff7e8;
+  }
+}
+
+.content1:hover {
+  animation: fadeIn .5s forwards;
+}
+
+.content2:hover {
+  animation: fadeInColor .5s forwards;
+}
+
+.content1:not(:hover) {
+  animation: fadeOut .5s forwards;
+}
+
+.content2:not(:hover) {
+  animation: fadeOutColor .5s forwards;
 }
 
 .divSporsmal {
@@ -67,7 +138,7 @@ li #omOss {
   margin-top: 25em;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #d3d3d3;
+  background-color:rgba(255,255,255,.8);
   border-radius: 10px;
   width: 55%;
 }
@@ -95,7 +166,7 @@ li #omOss {
   margin-left: 0.5em;
   margin-right: 0.5em;
   text-align: center;
-  background-color: white;
+  background-color: #FFC4C4;
   border-radius: 5px;
   border: none;
   padding: 2%;
@@ -112,7 +183,7 @@ li #omOss {
   color: black;
   margin: 1em 1em 0em 1em;
   text-align: center;
-  background-color: white;
+  background-color: #ADD8E6;
   border-radius: 50px;
   border: none;
   padding: 2%;
@@ -127,7 +198,7 @@ li #omOss {
   margin-top: 1em;
   margin-bottom: 1em;
   text-align: center;
-  background-color: white;
+  background-color: #ADD8E6;
   border-radius: 50px;
   border: none;
   padding: 2%;
@@ -143,7 +214,7 @@ li #omOss {
   top: 300%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #d3d3d3;
+  background-color:rgba(255,255,255,.8);
   border-radius: 5px;
   width: 55%;
 }
@@ -200,4 +271,47 @@ li #omOss {
     position: absolute;
     right: 50%;
     transform: translate(50%, -50%);
+}
+
+
+
+
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #d70926 50%, #fff7e8 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:5s;
+}
+
+.bg3 {
+  animation-duration:6s;
+}
+
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-2%);
+  }
+  100% {
+    transform:translateX(2%);
+  }
 }
