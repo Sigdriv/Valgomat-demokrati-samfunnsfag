@@ -168,7 +168,7 @@ function tilbakeSporsmal() {
 
 function svarSide() {
   svar = localStorage.getItem("lagretSvar");
-  let enighet = (svar / apSinScore) * 100;
+  let enighet = svar / apSinScore * 100;
 
   document.getElementById("prosentEnighet").innerHTML =
     "Du er " + Math.floor(enighet) + "% enig med Arbeiderpartiet";
@@ -176,15 +176,11 @@ function svarSide() {
     console.log(enighet);
 }
 document.addEventListener("DOMContentLoaded", function () {
-  // Call your functions here once the DOM is fully loaded
-  if (window.location.pathname == "/Main/HTML/valgomat.html") {
+  if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html") {
     nesteSporsmal();
-    // setTimeout(function () {
-    //   alert(
-    //     `Husk at du kan ikke svare nøytralt på mer enn ${antallNøytralGanger} av spørsmålene`
-    //   );;
-    // }, 3);
-  } else if (window.location.pathname == "/Main/HTML/svar.html") {
+      alert(
+        `Husk at du kan ikke svare nøytralt på mer enn ${antallNøytralGanger} av spørsmålene`)
+  } else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/svar.html") {
     svarSide();
   }
 });
