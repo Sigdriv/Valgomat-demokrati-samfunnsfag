@@ -1,12 +1,47 @@
+@font-face {
+    font-family: "Sans";
+    src: url(../Assets/NRKSans_Variable.woff2);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: Sans;
 }
 
-body {
-  background-image: url("Gustav.jpg");
+.navBar{
+  
+  margin: 1em;
+  top: 0px;
+}
+
+li {
+  margin: 0px;
+  display: inline-block;
+}
+
+img {
+ width: 30%;
+ height: 100%;
+}
+
+#pictureLi {
+  float: left;
+}
+
+li #omOss {
+  padding-top: 7%;
+}
+
+#omOss {
+  margin: 1em 1em 0 0;
+  text-decoration: none;
+  color: #d70926;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
 }
 
 .divLinkValgomat {
@@ -40,12 +75,13 @@ body {
 .divSporsmal h2 {
   text-align: center;
   margin: 1em;
+  padding: .5em;
 }
 
 .divSporsmal h1 {
   text-align: center;
-  margin: 1em 1em 0em 1em;
-  padding: 5% 0 5% 0;
+  margin: .5em 1em 1em 1em;
+  padding: 2% 0 2% 0;
 }
 
 .buttonDiv {
@@ -54,7 +90,6 @@ body {
 
 #svar {
   color: black;
-  margin: 0 auto;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 0.5em;
@@ -63,8 +98,8 @@ body {
   background-color: white;
   border-radius: 5px;
   border: none;
-  padding: 1em;
-  font-size: 1.5em;
+  padding: 2%;
+  font-size: 140%;
   cursor: pointer;
   box-shadow: 10px 10px 5px grey;
 }
@@ -80,8 +115,8 @@ body {
   background-color: white;
   border-radius: 50px;
   border: none;
-  padding: 1em;
-  font-size: 1.5em;
+  padding: 2%;
+  font-size: 140%;
   cursor: pointer;
   box-shadow: 10px 10px 5px grey;
 }
@@ -95,8 +130,8 @@ body {
   background-color: white;
   border-radius: 50px;
   border: none;
-  padding: 1em;
-  font-size: 1.5em;
+  padding: 2%;
+  font-size: 140%;
   cursor: pointer;
   box-shadow: 10px 10px 5px grey;
 }
@@ -141,7 +176,7 @@ body {
 
 .forOgMotArgumentDivLink {
   text-align: center;
-  margin: 1em;
+  margin: .5em 1em 1em 1em;
 }
 
 #forOgMotArgumenterLink {
@@ -149,6 +184,10 @@ body {
   color: black;
   margin: 0.5em;
   font-size: 1.25em;
+}
+
+#forOgMotArgumenterLink:hover {
+  text-decoration: underline;
 }
 
 #prosentEnighetDiv {
