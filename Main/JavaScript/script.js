@@ -85,7 +85,6 @@ while (sporsmalNummerArray.length < sporsmal.length) {
       sjekkRandom();
     } else {
       sporsmalNummerArray.push(nummer);
-      console.log(sporsmalNummerArray);
     }
   }
 }

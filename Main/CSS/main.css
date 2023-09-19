@@ -31,10 +31,6 @@ img {
   position: fixed;
 }
 
-li #omOss {
-  padding-top: 7%;
-}
-
 #valgomat {
   margin: 1em 1em 0 0;
   text-decoration: none;
@@ -44,7 +40,7 @@ li #omOss {
   text-align: center;
 }
 
-#omOss {
+#omOssIndex {
   margin: 1em 1em 0 0;
   text-decoration: none;
   color: #fff7e8;
@@ -131,6 +127,24 @@ li #omOss {
 
 .content2:not(:hover) {
   animation: fadeOutColor .5s forwards;
+}
+
+#omOss {
+  margin: 1em 1em 0 0;
+  text-decoration: none;
+  color: #d70926;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.siteLinks {
+  padding: 1.5em;
+  text-decoration: none;
+  color: #d70926;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
 }
 
 .divSporsmal {
@@ -263,18 +277,41 @@ li #omOss {
 
 #prosentEnighetDiv {
     text-align: center;
-    margin-top: 20em ;
+    margin-top: 20% ;
     padding: 1em;
-    background-color: #d3d3d3;
+    background-color:rgba(255,255,255,.8);
     border-radius: 5px;
-    width: 55%;
-    position: absolute;
-    right: 50%;
+    width: 50%;
+    position: relative;
     transform: translate(50%, -50%);
 }
 
+.viktigesaker {
+  text-align: center;
+  margin-top: 30em;
+  padding: 1em;
+  background-color:rgba(255,255,255,.8);
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transform: translate(50%, -50%);
+}
 
+#viktigesakerTekst{
+  text-align: center;
+  margin: 1em;
+}
 
+#viktigesakerTekstNummer{
+  font-size: 2em;
+  text-align: center;
+  margin: 1em;
+}
+
+h3 {
+  text-align: center;
+  padding: 1em;
+}
 
 html {
   height:100%;
