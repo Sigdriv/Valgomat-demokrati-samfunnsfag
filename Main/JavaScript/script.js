@@ -176,11 +176,11 @@ function svarSide() {
     console.log(enighet);
 }
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html") {
+  if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
     nesteSporsmal();
       alert(
         `Husk at du kan ikke svare nøytralt på mer enn ${antallNøytralGanger} av spørsmålene`)
-  } else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/svar.html") {
+  } else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/svar.html" || window.location.pathname == "/Main/HTML/svar.html") {
     svarSide();
   }
 });
