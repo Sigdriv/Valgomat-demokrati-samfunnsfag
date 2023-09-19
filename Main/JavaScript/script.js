@@ -144,12 +144,12 @@ function nesteSporsmal(button) {
       svar += svarArray[i];
     }
 
+    localStorage.setItem("lagretSvar", svar);
     //wait 3 seconds before redirecting
     setTimeout(function () {
       window.location.href = "./svar.html";
     }, 3000);
   }
-  localStorage.setItem("lagretSvar", svar);
 }
 
 function tilbakeSporsmal() {
@@ -179,11 +179,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Call your functions here once the DOM is fully loaded
   if (window.location.pathname == "/Main/HTML/valgomat.html") {
     nesteSporsmal();
-    setTimeout(function () {
-      alert(
-        `Husk at du kan ikke svare nøytralt på mer enn ${antallNøytralGanger} av spørsmålene`
-      );;
-    }, 3);
+    // setTimeout(function () {
+    //   alert(
+    //     `Husk at du kan ikke svare nøytralt på mer enn ${antallNøytralGanger} av spørsmålene`
+    //   );;
+    // }, 3);
   } else if (window.location.pathname == "/Main/HTML/svar.html") {
     svarSide();
   }
