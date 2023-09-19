@@ -177,9 +177,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Call your functions here once the DOM is fully loaded
   if (window.location.pathname == "/Main/HTML/valgomat.html") {
     nesteSporsmal();
-    alert(
-      `Husk at du kan ikke svare nøytralt på mer enn ${antallNøytralGanger} av spørsmålene`
-    );
+    setTimeout(function () {
+      alert(
+        `Husk at du kan ikke svare nøytralt på mer enn ${antallNøytralGanger} av spørsmålene`
+      );;
+    }, 3);
   } else if (window.location.pathname == "/Main/HTML/svar.html") {
     svarSide();
   }
