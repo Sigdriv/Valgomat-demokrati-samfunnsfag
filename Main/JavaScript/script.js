@@ -172,6 +172,8 @@ function svarSide() {
 
   document.getElementById("prosentEnighet").innerHTML =
     "Du er " + Math.floor(enighet) + "% enig med Arbeiderpartiet";
+
+    console.log(enighet);
 }
 document.addEventListener("DOMContentLoaded", function () {
   // Call your functions here once the DOM is fully loaded
