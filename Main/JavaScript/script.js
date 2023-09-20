@@ -133,7 +133,7 @@ function nesteSporsmal(button) {
     }
   } else {
     sporsmalText.innerHTML =
-      "Du har svart på alle spørsmålene! Du blir videresent når vi har regnet sammen svarene dine.";
+      "Du har svart på alle spørsmålene! Du blir videresendt når vi har regnet sammen svarene dine.";
     document.getElementsByClassName("buttonDiv")[0].remove();
     document.getElementsByClassName("nextDiv")[0].remove();
     document.getElementById("forOgMotArgumenterLink").remove();
@@ -142,9 +142,9 @@ function nesteSporsmal(button) {
 
     for (let i = 0; i < svarArray.length; i++) {
       svar += svarArray[i];
+      localStorage.setItem("lagretSvar", svar);
     }
 
-    localStorage.setItem("lagretSvar", svar);
     //wait 3 seconds before redirecting
     setTimeout(function () {
       window.location.href = "./svar.html";

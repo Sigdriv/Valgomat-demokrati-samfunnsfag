@@ -16,7 +16,12 @@
   top: 0px;
 }
 
-li {
+.linker {
+  margin: 0px;
+  display: inline-block;
+}
+
+#linker {
   margin: 0px;
   display: inline-block;
 }
@@ -276,25 +281,42 @@ img {
 }
 
 #prosentEnighetDiv {
-    text-align: center;
+    /* text-align: center;
     margin-top: 20% ;
     padding: 1em;
     background-color:rgba(255,255,255,.8);
     border-radius: 5px;
     width: 50%;
-    position: relative;
-    transform: translate(50%, -50%);
+    position: absolute;
+    transform: translate(50%, -50%); */
+
+  text-align: center;
+  position: relative;
+  margin-top: 25em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 10px;
+  width: 50%;
 }
 
 .viktigesaker {
-  text-align: center;
+  /* text-align: center;
   margin-top: 30em;
   padding: 1em;
   background-color:rgba(255,255,255,.8);
   border-radius: 5px;
   width: 50%;
+  position: absolute;
+  transform: translate(50%, -50%); */
+
   position: relative;
-  transform: translate(50%, -50%);
+  margin-top: 30em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 10px;
+  width: 50%;
 }
 
 #viktigesakerTekst{
@@ -306,6 +328,26 @@ img {
   font-size: 2em;
   text-align: center;
   margin: 1em;
+}
+
+.kilder {
+  text-align: center;
+  position: relative;
+  margin-top: 25em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.kilder h1 {
+  margin-top: 1em;
+}
+
+ul {
+  list-style-type: none;  
+
 }
 
 h3 {
