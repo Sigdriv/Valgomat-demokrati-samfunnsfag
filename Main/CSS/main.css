@@ -345,6 +345,26 @@ img {
   margin-top: 1em;
 }
 
+.omOssDiv {
+  text-align: center;
+  position: relative;
+  margin-top: 25em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.omOssDiv h1 {
+  margin: 1em;
+}
+
+#kilderTaggOmOss {
+  position: relative;
+  text-align: left;
+}
+
 ul {
   list-style-type: none;  
 
