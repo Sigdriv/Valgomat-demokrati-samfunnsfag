@@ -241,6 +241,7 @@ img {
 #argumenter {
   text-align: center;
   margin: 1em;
+  padding-top: 3%;
 }
 
 #forArgumenteOverskrift {
@@ -251,6 +252,7 @@ img {
 #forArgumenter {
   text-align: center;
   margin: 0.5em 1em 0.5em 1em;
+  font-weight: 300;
 }
 
 #motArgumenteOverskrift {
@@ -261,7 +263,8 @@ img {
 #motArgumenter {
   text-align: center;
   margin: 0.5em 1em 0.5em 1em;
-  padding-bottom: 1em;
+  padding-bottom: 5%;
+  font-weight: 300;
 }
 
 .forOgMotArgumentDivLink {
@@ -279,41 +282,30 @@ img {
 #forOgMotArgumenterLink:hover {
   text-decoration: underline;
 }
+.SvarDiv {
+  text-align: center;
+  padding-bottom: 10%;
+}
 
 #prosentEnighetDiv {
-    /* text-align: center;
-    margin-top: 20% ;
-    padding: 1em;
-    background-color:rgba(255,255,255,.8);
-    border-radius: 5px;
-    width: 50%;
-    position: absolute;
-    transform: translate(50%, -50%); */
-
   text-align: center;
-  position: relative;
-  margin-top: 25em;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* position: relative; */
+  margin: auto;
+  margin-top: 10%;
+  padding: 2.5% 0% 2.5% 0%;
+  /* transform: translate(-50%, -50%); */
   background-color:rgba(255,255,255,.8);
   border-radius: 10px;
   width: 50%;
 }
 
 .viktigesaker {
-  /* text-align: center;
-  margin-top: 30em;
-  padding: 1em;
-  background-color:rgba(255,255,255,.8);
-  border-radius: 5px;
-  width: 50%;
-  position: absolute;
-  transform: translate(50%, -50%); */
-
-  position: relative;
-  margin-top: 30em;
+  /* position: relative; */
+  margin: auto;
+  margin-top: 10%;
+  padding: 2.5% 0% 2.5% 0%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   background-color:rgba(255,255,255,.8);
   border-radius: 10px;
   width: 50%;
