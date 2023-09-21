@@ -13,21 +13,21 @@
 
 .navBar{
   margin: 1em;
-  top: 0px;
+  top: 0em;
 }
 
 .linker {
-  margin: 0px;
+  margin: 0em;
   display: inline-block;
 }
 
 #linker {
-  margin: 0px;
+  margin: 0em;
   display: inline-block;
 }
 
 img {
- width: 30%;
+ width: 5em;
  height: 100%;
 }
 
@@ -37,7 +37,7 @@ img {
 }
 
 #valgomat {
-  margin: 1em 1em 0 0;
+  margin: 1em 20% 0 0;
   text-decoration: none;
   color: #d70926;
   font-size: 2em;
@@ -54,16 +54,18 @@ img {
   text-align: center;
 }
 
+.content {
+  padding-top: 20em;
+  text-align: center;
+}
+
 .content1 {
   background-color:rgba(255,255,255,.3);
   border-radius:.25em;
   box-shadow:0 0 .25em rgba(0,0,0,.25);
   box-sizing:border-box;
-  left:35%;
-  padding:10vmin;
-  position:fixed;
-  top:50%;
-  transform:translate(-50%, -50%);
+  padding:5%;
+  position:fixed relative;
 }
 
 .content2 {
@@ -71,11 +73,8 @@ img {
   border-radius:.25em;
   box-shadow:0 0 .25em rgba(0,0,0,.25);
   box-sizing:border-box;
-  left:65%;
-  padding:10vmin;
-  position:fixed;
-  top:50%;
-  transform:translate(-50%, -50%);
+  padding:5%;
+  position:fixed relative;
 }
 
 @keyframes fadeIn {
@@ -152,11 +151,14 @@ img {
   text-align: center;
 }
 
+.valgomatDiv {
+  padding-bottom: 5%;
+}
+
 .divSporsmal {
+  margin: auto;
   position: relative;
-  margin-top: 25em;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 7%;
   background-color:rgba(255,255,255,.8);
   border-radius: 10px;
   width: 55%;
@@ -227,12 +229,9 @@ img {
 }
 
 .forOgMotArgumenterDiv {
+  margin: auto;
+  margin-bottom: 5%;
   position: relative;
-  border: 2em;
-  margin-top: 1em;
-  top: 300%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color:rgba(255,255,255,.8);
   border-radius: 5px;
   width: 55%;
@@ -282,6 +281,7 @@ img {
 #forOgMotArgumenterLink:hover {
   text-decoration: underline;
 }
+
 .SvarDiv {
   text-align: center;
   padding-bottom: 10%;
@@ -289,23 +289,19 @@ img {
 
 #prosentEnighetDiv {
   text-align: center;
-  /* position: relative; */
   margin: auto;
-  margin-top: 10%;
+  margin-top: 15%;
   padding: 2.5% 0% 2.5% 0%;
-  /* transform: translate(-50%, -50%); */
   background-color:rgba(255,255,255,.8);
   border-radius: 10px;
   width: 50%;
 }
 
 .viktigesaker {
-  /* position: relative; */
   margin: auto;
-  margin-top: 10%;
-  padding: 2.5% 0% 2.5% 0%;
+  margin-top: 5%;
+  padding: 2.5% 2% 2.5% 2%;
   left: 50%;
-  /* transform: translate(-50%, -50%); */
   background-color:rgba(255,255,255,.8);
   border-radius: 10px;
   width: 50%;
@@ -323,11 +319,10 @@ img {
 }
 
 .kilder {
+  margin: auto;
   text-align: center;
   position: relative;
-  margin-top: 25em;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 6%;
   background-color:rgba(255,255,255,.8);
   border-radius: 10px;
   width: 50%;
@@ -338,23 +333,22 @@ img {
 }
 
 .omOssDiv {
+  margin: auto;
   text-align: center;
   position: relative;
-  margin-top: 25em;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 15%;
   background-color:rgba(255,255,255,.8);
   border-radius: 10px;
   width: 50%;
+  padding-bottom: 2em;
 }
 
-.omOssDiv h1 {
-  margin: 1em;
+.omOssDiv h1{
+  padding: 3%;
 }
 
-#kilderTaggOmOss {
-  position: relative;
-  text-align: left;
+.omOssDiv h2{
+  padding: 3%;
 }
 
 ul {
@@ -365,14 +359,11 @@ ul {
 h3 {
   text-align: center;
   padding: 1em;
+  font-weight: 400;
 }
 
 html {
   height:100%;
-}
-
-body {
-  margin:0;
 }
 
 .bg {
