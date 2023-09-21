@@ -1,3 +1,4 @@
+// arrays with questions, for arguments and against arguments
 let sporsmal = [
   "Bør abort være tillat?",
   "Synes du det er rettferdig at folk som tjener mer penger, betaler mer skatt?",
@@ -52,10 +53,12 @@ let motArgumenter = [
   "Økte kostnader, mangel på spesialiserte ressurser og prioriteringer av andre helseproblemer kan være bekymringer.",
 ];
 
+
 let sporsmalNummerArray = [];
 
 let svarArray = [];
 
+//calculate how many questions there are
 const antallSporsmal = sporsmal.length;
 let randomSporsmalNummer = 0;
 let sporsmalNummer = 0;
@@ -63,19 +66,22 @@ let svar = 0;
 let prevButton = null;
 let apSinScore = sporsmal.length * 4;
 let nøytralButton = -1;
+
+// sets how many times you can answer neutral
 let antallNøytralGanger = 5;
 
+// get elements from HTML
 const titleSporsmal = document.getElementById("titleSporsmal");
 const sporsmalText = document.getElementById("sporsmal");
 const antallSporsmalText = document.getElementById("antallSporsmal");
 const forArgumenterText = document.getElementById("forArgumenter");
 const motArgumenterText = document.getElementById("motArgumenter");
 
+// randomize questions and check if the question has already been randomized
 function randomSporsmal() {
   nummer = Math.floor(Math.random() * sporsmal.length);
   return nummer;
 }
-
 while (sporsmalNummerArray.length < sporsmal.length) {
   randomSporsmal();
   sjekkRandom();
@@ -89,6 +95,7 @@ while (sporsmalNummerArray.length < sporsmal.length) {
   }
 }
 
+// Handle the buttons, and save the answer in an array
 function button(button) {
   if (prevButton != null) {
     prevButton.style.backgroundColor = "#FFC4C4";
@@ -98,6 +105,7 @@ function button(button) {
 
   svarArray[sporsmalNummer - 1] = parseInt(button.value);
 
+  // check if the user has answered neutral too many times, and disable the neutral button if they have
   let numberToCount = 2;
   nøytralButton = svarArray.filter((num) => num === numberToCount).length;
 
@@ -111,12 +119,16 @@ function button(button) {
   }
 }
 
+// Get called when the user clicks the next button
 function nesteSporsmal(button) {
+
+    // Change the color of the button that was clicked
   if (prevButton != null) {
     prevButton.style.backgroundColor = "#FFC4C4";
   }
   prevButton = button;
 
+  // Updates the question and the arguments
   if (sporsmalNummer < sporsmal.length) {
     sporsmalNummer++;
     titleSporsmal.innerHTML = "Spørsmål " + sporsmalNummer;
@@ -127,11 +139,15 @@ function nesteSporsmal(button) {
       forArgumenter[sporsmalNummerArray[sporsmalNummer - 1]];
     motArgumenterText.innerHTML =
       motArgumenter[sporsmalNummerArray[sporsmalNummer - 1]];
-
+    
+      // Checkes if the user has changed their answer, and enables the neutral button if they have
     if (nøytralButton < antallNøytralGanger) {
       document.getElementsByClassName("noytralButton")[0].disabled = false;
     }
-  } else {
+  }
+
+  // If the user has answered all the questions, they get redirected to the svar.html page
+  else {
     sporsmalText.innerHTML =
       "Du har svart på alle spørsmålene! Du blir videresendt når vi har regnet sammen svarene dine.";
     document.getElementsByClassName("buttonDiv")[0].remove();
@@ -152,7 +168,10 @@ function nesteSporsmal(button) {
   }
 }
 
+// Get called when the user clicks the back button
 function tilbakeSporsmal() {
+
+  // Updates the question and the arguments to the previous question
   if (sporsmalNummer > 1) {
     sporsmalNummer--;
     titleSporsmal.innerHTML = "Spørsmål " + sporsmalNummer;
@@ -166,15 +185,17 @@ function tilbakeSporsmal() {
   }
 }
 
+// Counting together the answers and calculating the percentage of agreement
 function svarSide() {
   svar = localStorage.getItem("lagretSvar");
   let enighet = svar / apSinScore * 100;
 
+  // Displaying the percentage of agreement
   document.getElementById("prosentEnighet").innerHTML =
     "Du er " + Math.floor(enighet) + "% enig med Arbeiderpartiet";
-
-    console.log(enighet);
 }
+
+// Checks if the page is fully loaded, and calls the functions
 document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
     nesteSporsmal();
