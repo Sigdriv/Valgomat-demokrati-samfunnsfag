@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="titleSporsmal">Spørmål 1</title>
-    <link rel="stylesheet" href="../CSS/main.css">
-</head>
-<body id="boody">
+    <link rel="stylesheet" href="../CSS/main.css" />
+    <link rel="shortcut icon" href="../Assets/Logo/Rosesymbol/Digital/Arbeiderpartiet_rosesymbol_rod_RGB.svg" type="image/x-icon">
+  </head>
+  <body>
+
+    <div class="navBar">
+      <ul>
+          <li id="pictureLi" class="linker"><a href="index.html"><img src="../Assets/Logo/Rosesymbol/Digital/Arbeiderpartiet_rosesymbol_rod_RGB.svg" alt=""></a></li>
+      </ul>
+      <div class="siteLinks">
+          <ul>
+              <li id="linker"><a id='omOss' href="valgomat.html">Valgomat</a></li>
+              <li id="linker"><a id="omOss" href="omOss.html">Om Oss</a></li>
+          </ul>
+      </div>
+  </div>
+
     <div class="divSporsmal">
-        <h2 id="antallSporsmal">Spørsmål 1/?</h2>
-        <h1 id="sporsmal">Bør det være gratis høyere utdanning?</h1>
-        <div class="forOgMotArgumentDivLink">
-            <a href="#forOgMotArgumenterDivId" id="forOgMotArgumenterLink">For og Mot argumenter</a>
-        </div>
-        
-        <div class="buttonDiv">
-            <button id="svar" onclick="button(this)" value="4">Enig</button>
-            <button id="svar" onclick="button(this)" value="3">Delvis enig</button>
-            <button id="svar" onclick="button(this)" value="2">Nøytral</button>
-            <button id="svar" onclick="button(this)" value="1">Delvis uenig</button>
-            <button id="svar" onclick="button(this)" value="0">Uenig</button>
-        </div>
-        <div class="nextDiv">
-            <button id="nextButton" onclick="nesteSporsmal()">Neste</button>
-        </div>
+      <h2 id="antallSporsmal">Spørsmål 1/?</h2>
+      <h1 id="sporsmal">Bør det være gratis høyere utdanning?</h1>
+      <div class="forOgMotArgumentDivLink">
+        <a href="#forOgMotArgumenterDivId" id="forOgMotArgumenterLink">For og Mot argumenter</a>
+    </div>
+
+    <div class="buttonDiv">
+        <button id="svar" onclick="button(this)" value="4">Enig</button>
+        <button id="svar" onclick="button(this)" value="3">Delvis enig</button>
+        <button id="svar" class='noytralButton' onclick="button(this)" value="2">Nøytral</button>
+        <button id="svar" onclick="button(this)" value="1">Delvis uenig</button>
+        <button id="svar" onclick="button(this)" value="0">Uenig</button>
+      </div>
+      <div class="nextDiv">
+        <button id="backButton" onclick="tilbakeSporsmal()">Tilbake</button>
+        <button id="nextButton" onclick="nesteSporsmal()">Neste</button>
+      </div>
     </div>
     <div class="forOgMotArgumenterDiv" id="forOgMotArgumenterDivId">
-        <h1 id="argumenter">Argumenter</h1>
-        <div class="for">
-            <h1 id="forArgumenteOverskrift">For</h1>
-            <h2 id="forArgumenter">For argumenter her</h2>
-        </div>
-        <div>
-            <h1 id="motArgumenteOverskrift">Mot</h1>
-            <h2 id="motArgumenter">Mot argumenter her</h2>
-        </div>
-        <h1></h1>
-    </di>
+      <h1 id="argumenter">Argumenter</h1>
+      <div class="for">
+        <h1 id="forArgumenteOverskrift">For</h1>
+        <h2 id="forArgumenter">For argumenter her</h2>
+      </div>
+      <div>
+        <h1 id="motArgumenteOverskrift">Mot</h1>
+        <h2 id="motArgumenter">Mot argumenter her</h2>
+      </div>
+    </div>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
     <script src="../JavaScript/script.js"></script>
-</body>
+  </body>
 </html>

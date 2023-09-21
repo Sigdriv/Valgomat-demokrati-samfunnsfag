@@ -1,140 +1,416 @@
+@font-face {
+    font-family: "Sans";
+    src: url(../Assets/NRKSans_Variable.woff2);
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Sans;
 }
 
-#boody{
-    background-image: url("../Bilder/alle\ skal\ med\ AP.jpg");
+.navBar{
+  margin: 1em;
+  top: 0px;
 }
 
-.divLinkValgomat {
-    position: relative;
-    margin-top: 25em;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #d3d3d3;
-    border-radius: 5px;
-    width: 55%;
+.linker {
+  margin: 0px;
+  display: inline-block;
 }
 
-#linkValgomat {
-    text-decoration: none;
-    color: black;
-    margin: 2em;
-    text-align: center;
-    font-size: 1.5em;
+#linker {
+  margin: 0px;
+  display: inline-block;
+}
+
+img {
+ width: 30%;
+ height: 100%;
+}
+
+#pictureLi {
+  float: left;
+  position: fixed;
+}
+
+#valgomat {
+  margin: 1em 1em 0 0;
+  text-decoration: none;
+  color: #d70926;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#omOssIndex {
+  margin: 1em 1em 0 0;
+  text-decoration: none;
+  color: #fff7e8;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content1 {
+  background-color:rgba(255,255,255,.3);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:35%;
+  padding:10vmin;
+  position:fixed;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+.content2 {
+  background-color:rgba(255,255,255,.3);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:65%;
+  padding:10vmin;
+  position:fixed;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(255,255,255,.3);
+  }
+  to {
+    background-color: rgba(255,255,255);
+  }
+}
+
+@keyframes fadeInColor {
+  from {
+    background-color: rgba(255,255,255,.3);
+    color: #fff7e8;
+  }
+  to {
+    background-color: rgba(255,255,255);
+    color: #d70926;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    background-color: rgba(255,255,255);
+  }
+  to {
+    background-color: rgba(255,255,255,.3);
+  }
+}
+
+@keyframes fadeOutColor {
+  from {
+    background-color: rgba(255,255,255);
+    color: #d70926;
+  }
+  to {
+    background-color: rgba(255,255,255,.3);
+    color: #fff7e8;
+  }
+}
+
+.content1:hover {
+  animation: fadeIn .5s forwards;
+}
+
+.content2:hover {
+  animation: fadeInColor .5s forwards;
+}
+
+.content1:not(:hover) {
+  animation: fadeOut .5s forwards;
+}
+
+.content2:not(:hover) {
+  animation: fadeOutColor .5s forwards;
+}
+
+#omOss {
+  margin: 1em 1em 0 0;
+  text-decoration: none;
+  color: #d70926;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.siteLinks {
+  padding: 1.5em;
+  text-decoration: none;
+  color: #d70926;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
 }
 
 .divSporsmal {
-    position: relative;
-    margin-top: 25em;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #d3d3d3;
-    border-radius: 10px;
-    width: 55%;
+  position: relative;
+  margin-top: 25em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 10px;
+  width: 55%;
 }
 
-.divSporsmal h2{
-    text-align: center;
-    margin: 1em;
+.divSporsmal h2 {
+  text-align: center;
+  margin: 1em;
+  padding: .5em;
 }
 
-.divSporsmal h1{
-    text-align: center;
-    margin: 1em 1em 0em 1em;
-    padding: 5% 0 5% 0;
+.divSporsmal h1 {
+  text-align: center;
+  margin: .5em 1em 1em 1em;
+  padding: 2% 0 2% 0;
 }
 
 .buttonDiv {
-    text-align: center;
+  text-align: center;
 }
 
 #svar {
-    color: black;
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: .5em;
-    margin-right: .5em;
-    text-align: center;
-    background-color: white;
-    border-radius: 5px;
-    border: none;
-    padding: 1em;
-    font-size: 1.5em;
-    cursor: pointer;
-    box-shadow: 10px 10px 5px grey;
+  color: black;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-align: center;
+  background-color: #FFC4C4;
+  border-radius: 5px;
+  border: none;
+  padding: 2%;
+  font-size: 140%;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .nextDiv {
-    text-align: center;
+  text-align: center;
 }
 
 #nextButton {
-    color: black;
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    text-align: center;
-    background-color: white;
-    border-radius: 50px;
-    border: none;
-    padding: 1em;
-    font-size: 1.5em;
-    cursor: pointer;
-    box-shadow: 10px 10px 5px grey;
+  color: black;
+  margin: 1em 1em 0em 1em;
+  text-align: center;
+  background-color: #ADD8E6;
+  border-radius: 50px;
+  border: none;
+  padding: 2%;
+  font-size: 140%;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px grey;
+}
+
+#backButton {
+  color: black;
+  margin: 1em 1em 0em 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  background-color: #ADD8E6;
+  border-radius: 50px;
+  border: none;
+  padding: 2%;
+  font-size: 140%;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .forOgMotArgumenterDiv {
-    position: relative;
-    border: 2em;
-    margin-top:1em;
-    top: 300%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #d3d3d3;
-    border-radius: 5px;
-    width: 55%;
+  position: relative;
+  border: 2em;
+  margin-top: 1em;
+  top: 300%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 5px;
+  width: 55%;
 }
 
 #argumenter {
-    text-align: center;
-    margin: 1em;
+  text-align: center;
+  margin: 1em;
 }
 
 #forArgumenteOverskrift {
-    text-align: center;
-    margin: 1em;
+  text-align: center;
+  margin: 1em;
 }
 
 #forArgumenter {
-    text-align: center;
-    margin: .5em 1em .5em 1em;
+  text-align: center;
+  margin: 0.5em 1em 0.5em 1em;
 }
 
 #motArgumenteOverskrift {
-    text-align: center;
-    margin: 1em;
+  text-align: center;
+  margin: 1em;
 }
 
 #motArgumenter {
-    text-align: center;
-    margin: .5em 1em .5em 1em;
-    padding-bottom: 1em;
+  text-align: center;
+  margin: 0.5em 1em 0.5em 1em;
+  padding-bottom: 1em;
 }
 
-.forOgMotArgumentDivLink{
-    text-align: center;
-    margin: 1em;
+.forOgMotArgumentDivLink {
+  text-align: center;
+  margin: .5em 1em 1em 1em;
 }
 
 #forOgMotArgumenterLink {
-    text-decoration: none;
-    color: black;
-    margin: .5em;
-    font-size: 1.25em;
-    
+  text-decoration: none;
+  color: black;
+  margin: 0.5em;
+  font-size: 1.25em;
+}
+
+#forOgMotArgumenterLink:hover {
+  text-decoration: underline;
+}
+
+#prosentEnighetDiv {
+    /* text-align: center;
+    margin-top: 20% ;
+    padding: 1em;
+    background-color:rgba(255,255,255,.8);
+    border-radius: 5px;
+    width: 50%;
+    position: absolute;
+    transform: translate(50%, -50%); */
+
+  text-align: center;
+  position: relative;
+  margin-top: 25em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.viktigesaker {
+  /* text-align: center;
+  margin-top: 30em;
+  padding: 1em;
+  background-color:rgba(255,255,255,.8);
+  border-radius: 5px;
+  width: 50%;
+  position: absolute;
+  transform: translate(50%, -50%); */
+
+  position: relative;
+  margin-top: 30em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 10px;
+  width: 50%;
+}
+
+#viktigesakerTekst{
+  text-align: center;
+  margin: 1em;
+}
+
+#viktigesakerTekstNummer{
+  font-size: 2em;
+  text-align: center;
+  margin: 1em;
+}
+
+.kilder {
+  text-align: center;
+  position: relative;
+  margin-top: 25em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.kilder h1 {
+  margin-top: 1em;
+}
+
+.omOssDiv {
+  text-align: center;
+  position: relative;
+  margin-top: 25em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255,255,255,.8);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.omOssDiv h1 {
+  margin: 1em;
+}
+
+#kilderTaggOmOss {
+  position: relative;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;  
+
+}
+
+h3 {
+  text-align: center;
+  padding: 1em;
+}
+
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #d70926 50%, #fff7e8 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:5s;
+}
+
+.bg3 {
+  animation-duration:6s;
+}
+
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-2%);
+  }
+  100% {
+    transform:translateX(2%);
+  }
 }
