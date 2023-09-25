@@ -1,4 +1,3 @@
-sprokFinder();
 
 // arrays with questions, for arguments and against arguments
 let sporsmalNorsk = [
@@ -55,19 +54,86 @@ let motArgumenterNorsk = [
   "Økte kostnader, mangel på spesialiserte ressurser og prioriteringer av andre helseproblemer kan være bekymringer.",
 ];
 
+let sporsmalDE = [
+  "Soll Abtreibung erlaubt sein?",
+  "Findest du es gerecht, dass Menschen, die mehr verdienen, mehr Steuern zahlen?",
+  "Sollte der Staat mehr in Bildung und Schulen investieren?",
+  "Sollte die höhere Bildung kostenlos sein?",
+  "Sollte mehr in den öffentlichen Nahverkehr investiert werden?",
+  "Sollte es mehr staatliche Unterstützung für kleine Unternehmen und Unternehmertum geben?",
+  "Sollte mehr in erneuerbare Energien investiert werden?",
+  "Sollte mehr in Schulmahlzeiten investiert werden, um eine gesunde Ernährung für Schulkinder zu gewährleisten?",
+  "Sollte mehr in die Tourismusbranche investiert werden, um den Tourismus zu fördern?",
+  "Sollte mehr Fokus auf Inklusion und Unterstützung von Menschen mit Behinderungen gelegt werden?",
+  "Sollte das Internet und der Datenschutz im Internet strenger reguliert werden?",
+  "Sollte mehr in die Rehabilitation und Behandlung von Drogenabhängigen investiert werden?",
+  "Sollte der Staat mehr Unterstützung für Sport und Freizeitaktivitäten für Kinder und Jugendliche bieten?",
+  "Sollte mehr in die Landwirtschaft und Ernährungssicherheit investiert werden?",
+  "Sollte mehr Fokus auf psychische Gesundheit im Gesundheitswesen gelegt werden?"
+];
+
+let forArgumenterDE = [
+  "Frauen sollten das Recht haben, über ihren eigenen Körper und ihre Gesundheit zu entscheiden, einschließlich des Rechts auf Beendigung einer unerwünschten Schwangerschaft.",
+  "Erhöht die gesellschaftliche Gerechtigkeit, indem die Belastung öffentlicher Dienstleistungen aufgrund der Zahlungsfähigkeit geteilt wird.",
+  "Eine bessere Bildung macht Bürger kompetenter, stärkt die Wirtschaft und fördert kulturelle Entwicklung und Innovation.",
+  "Kostenlose höhere Bildung ermöglicht gleichen Zugang, verringert die finanzielle Belastung und fördert Wissen und Innovation.",
+  "Der öffentliche Nahverkehr reduziert den Verkehr, verbessert die Luftqualität und bietet allen eine zugängliche, kostengünstige Transportmöglichkeit.",
+  "Unterstützung für kleine Unternehmen schafft Arbeitsplätze, fördert das Wirtschaftswachstum und unterstützt Innovation und Wettbewerbsfähigkeit.",
+  "Erneuerbare Energien reduzieren den Klimawandel, schaffen grüne Arbeitsplätze und sorgen für Energiesicherheit durch nachhaltige Quellen.",
+  "Schulmahlzeiten fördern gesundes Wachstum, Konzentration und Bildungsergebnisse, verringern Ungleichheiten und fördern frühzeitig das Gesundheitsbewusstsein.",
+  "Die Tourismusbranche generiert Einnahmen, schafft Arbeitsplätze und fördert kulturelle Vielfalt durch Tourismus, der die Wirtschaft und das Kulturerbe stärkt.",
+  "Inklusion und Unterstützung fördern Gerechtigkeit, gleiche Chancen und bereichern die Gesellschaft durch die Einbeziehung aller Bürger.",
+  "Strengere Regulierung schützt die Privatsphäre, verhindert den Missbrauch von Daten und bekämpft Cyberkriminalität für eine sicherere Internetnutzung.",
+  "Behandlung und Rehabilitation reduzieren Gesundheitsschäden, Kriminalität und die Belastung des Gesundheitssystems und verbessern die Lebensqualität.",
+  "Unterstützung für Sport und Freizeitaktivitäten fördert einen gesunden Lebensstil, soziale Integration und bietet jungen Menschen positive Lernerfahrungen.",
+  "Mehr Investitionen in die Landwirtschaft stärken die Ernährungssicherheit, verringern die Abhängigkeit von Importen und unterstützen nachhaltige Landwirtschaft zum Schutz der Umwelt.",
+  "Mehr Fokus auf psychische Gesundheit ermöglicht eine frühere Diagnose, verbesserte Lebensqualität und verringert die Belastung des Gesundheitssystems."
+];
+
+let motArgumenterDE = [
+  "Der Fötus hat ein Recht auf Leben, und es ist unmoralisch, eine Schwangerschaft zu beenden, weil dies das Leben eines unschuldigen Menschen bedeutet.",
+  "Kann das Wirtschaftswachstum hemmen und die Motivation derjenigen beeinträchtigen, die Arbeitsplätze schaffen und investieren.",
+  "Erhöhte staatliche Ausgaben können zu höheren Steuern und mehr Bürokratie führen, was von einigen abgelehnt wird.",
+  "Kostenlose Bildung kann zu überfüllten Universitäten, höheren Steuerkosten und Qualitätsproblemen führen.",
+  "Steigende Kosten und Steuern, Bedarf an Investitionen in die Infrastruktur und Widerstand gegen Änderungen im Verkehrsverhalten.",
+  "Staatliche Interventionen können ungleichen Wettbewerb, Kosten und bürokratische Hindernisse für größere Unternehmen schaffen.",
+  "Höhere Anlaufkosten, schwankende Energieerzeugung und Auswirkungen auf bestehende Energiesektoren können Bedenken sein.",
+  "Steigende Kosten, logistische Herausforderungen und individuelle Kostenpräferenzen können die Umsetzung von Schulmahlzeitprogrammen komplizieren.",
+  "Übermäßiger Tourismus kann die Umwelt schädigen, überfüllte Reiseziele verursachen und die lokale Kultur und Gemeinschaft verzerren.",
+  "Steigende Kosten, logistische Herausforderungen und Änderungen in der bestehenden Infrastruktur können praktische Bedenken sein.",
+  "Überregulierung kann die Meinungsfreiheit einschränken, Innovationen hemmen und unnötige Bürokratie und Kosten verursachen.",
+  "Steigende Kosten, Mangel an Behandlungsressourcen und Sorgen vor Rückfällen können Herausforderungen darstellen.",
+  "Begrenzte Budgetressourcen, Risiko einer Überbeteiligung und mangelnde Effizienz von Programmen können Bedenken sein.",
+  "Überproduktion, Subventionierung und landwirtschaftliche Praktiken können zu einem erhöhten Ressourcenverbrauch und Umweltproblemen führen.",
+  "Steigende Kosten, Mangel an spezialisierten Ressourcen und Priorisierung anderer Gesundheitsprobleme können Bedenken darstellen."
+];
+
+
+let sporsmal = [];
+
+if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
+  sporsmal = sporsmalNorsk;
+  motArgumenter = motArgumenterNorsk;
+  forArgumenter = forArgumenterNorsk;
+  localStorage.setItem("sporsmal", sporsmal.length);
+}
+else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/valgomat.html" || window.location.pathname == "/Main/HTML/DE/valgomat.html"){
+  sporsmal = sporsmalDE;
+  motArgumenter = motArgumenterDE;
+  forArgumenter = forArgumenterDE;
+  localStorage.setItem("sporsmal", sporsmal.length);
+}
 
 let sporsmalNummerArray = [];
 
 let svarArray = [];
 
 //calculate how many questions there are
-let sporsmal = [];
 const antallSporsmal = sporsmal.length;
 let randomSporsmalNummer = 0;
 let sporsmalNummer = 0;
 let svar = 0;
 let prevButton = null;
-let apSinScore = sporsmal.length * 4;
 let nøytralButton = -1;
 
 
@@ -81,13 +147,6 @@ const antallSporsmalText = document.getElementById("antallSporsmal");
 const forArgumenterText = document.getElementById("forArgumenter");
 const motArgumenterText = document.getElementById("motArgumenter");
 
-function sprokFinder() {
-  if (window.location.pathname = "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
-    sporsmal = sporsmalNorsk;
-  } else {
-    sporsmal = sporsmalDE;
-  }
-}
 
 // randomize questions and check if the question has already been randomized
 function randomSporsmal() {
@@ -143,10 +202,16 @@ function nesteSporsmal(button) {
   // Updates the question and the arguments
   if (sporsmalNummer < sporsmal.length) {
     sporsmalNummer++;
-    titleSporsmal.innerHTML = "Spørsmål " + sporsmalNummer;
-    sporsmalText.innerHTML = sporsmal[sporsmalNummerArray[sporsmalNummer - 1]];
-    antallSporsmalText.innerHTML =
+    if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
+      titleSporsmal.innerHTML = "Spørsmål " + sporsmalNummer;
+      antallSporsmalText.innerHTML =
       "Spørsmål " + sporsmalNummer + "/" + antallSporsmal;
+    } else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/valgomat.html" || window.location.pathname == "/Main/HTML/DE/valgomat.html") {
+      titleSporsmal.innerHTML = "Frage " + sporsmalNummer;
+      antallSporsmalText.innerHTML =
+        "Frage " + sporsmalNummer + "/" + antallSporsmal;
+    }
+    sporsmalText.innerHTML = sporsmal[sporsmalNummerArray[sporsmalNummer - 1]];
     forArgumenterText.innerHTML =
       forArgumenter[sporsmalNummerArray[sporsmalNummer - 1]];
     motArgumenterText.innerHTML =
@@ -160,8 +225,13 @@ function nesteSporsmal(button) {
 
   // If the user has answered all the questions, they get redirected to the svar.html page
   else {
-    sporsmalText.innerHTML =
-      "Du har svart på alle spørsmålene! Du blir videresendt når vi har regnet sammen svarene dine.";
+    if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
+      sporsmalText.innerHTML =
+        "Du har svart på alle spørsmålene! Du blir videresendt når vi har regnet sammen svarene dine.";
+    } else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/valgomat.html" || window.location.pathname == "/Main/HTML/DE/valgomat.html") {
+      sporsmalText.innerHTML =
+        "Du hast alle Fragen beantwortet! Du wirst weitergeleitet, sobald wir deine Antworten ausgewertet haben.";
+    }
     document.getElementsByClassName("buttonDiv")[0].remove();
     document.getElementsByClassName("nextDiv")[0].remove();
     document.getElementById("forOgMotArgumenterLink").remove();
@@ -199,17 +269,25 @@ function tilbakeSporsmal() {
 
 // Counting together the answers and calculating the percentage of agreement
 function svarSide() {
+  apSinScore = parseInt(localStorage.getItem("sporsmal")) * 4;
   svar = localStorage.getItem("lagretSvar");
   let enighet = svar / apSinScore * 100;
 
   // Displaying the percentage of agreement
-  document.getElementById("prosentEnighet").innerHTML =
-    "Du er " + Math.floor(enighet) + "% enig med Arbeiderpartiet";
+  if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/svar.html" || window.location.pathname == "/Main/HTML/svar.html") {
+    document.getElementById("prosentEnighet").innerHTML =
+      "Du er " + Math.floor(enighet) + "% enig med Arbeiderpartiet";  
+  }
+  else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/svar.html" || window.location.pathname == "/Main/HTML/DE/svar.html") {
+    document.getElementById("prosentEnighet").innerHTML =
+    "Du stimmst der Arbeiterpartei zu zu " + Math.floor(enighet) + "%";
+  }
 }
 
 // Checks if the page is fully loaded, and calls the functions
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html" || window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/valgomat.html" || window.location.pathname == "/Main/HTML/DE/valgomat.html") {
+  if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html"
+  || window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/valgomat.html" || window.location.pathname == "/Main/HTML/DE/valgomat.html") {
     nesteSporsmal();
     if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
       alert(
@@ -218,7 +296,8 @@ document.addEventListener("DOMContentLoaded", function () {
       alert(`Denk daran, dass du auf nicht mehr als ${antallNøytralGanger} der Fragen neutral antworten kannst`)
     }
 
-  } else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/svar.html" || window.location.pathname == "/Main/HTML/svar.html" || window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/svar.html" || window.location.pathname == "/Main/HTML/DE/svar.html") {
+  } else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/svar.html" || window.location.pathname == "/Main/HTML/svar.html"
+  || window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/svar.html" || window.location.pathname == "/Main/HTML/DE/svar.html") {
     svarSide();
   }
 });
