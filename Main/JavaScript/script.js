@@ -1,5 +1,7 @@
+sprokFinder();
+
 // arrays with questions, for arguments and against arguments
-let sporsmal = [
+let sporsmalNorsk = [
   "Bør abort være tillat?",
   "Synes du det er rettferdig at folk som tjener mer penger, betaler mer skatt?",
   "Bør staten investere mer i utdanning og skole?",
@@ -17,7 +19,7 @@ let sporsmal = [
   "Bør det være mer fokus på psykisk helse i helsetjenesten?",
 ];
 
-let forArgumenter = [
+let forArgumenterNorsk = [
   "Kvinner bør ha rett til å bestemme over sin egen kropp og helse, inkludert retten til å avslutte en uønsket graviditet.",
   "Øker samfunnets rettferdighet ved å dele byrden av offentlige tjenester basert på evne til betaling.",
   "Bedre utdanning gir samfunnet kompetente borgere, styrker økonomien og fremmer kulturell utvikling og innovasjon.",
@@ -35,7 +37,7 @@ let forArgumenter = [
   "Mer fokus på psykisk helse gir tidligere diagnose, bedre livskvalitet og reduserer byrden på helsevesenet.",
 ];
 
-let motArgumenter = [
+let motArgumenterNorsk = [
   "Fosteret har rett til liv og det er umoralsk å avslutte en graviditet fordi det innebærer å ta livet av et uskyldig menneske.",
   "Kan hemme økonomisk vekst og motivasjon for de som skaper arbeidsplasser og investerer.",
   "Økte statlige utgifter kan føre til høyere skatter og mer byråkrati, som noen motsetter seg.",
@@ -59,6 +61,7 @@ let sporsmalNummerArray = [];
 let svarArray = [];
 
 //calculate how many questions there are
+let sporsmal = [];
 const antallSporsmal = sporsmal.length;
 let randomSporsmalNummer = 0;
 let sporsmalNummer = 0;
@@ -66,6 +69,7 @@ let svar = 0;
 let prevButton = null;
 let apSinScore = sporsmal.length * 4;
 let nøytralButton = -1;
+
 
 // sets how many times you can answer neutral
 let antallNøytralGanger = 5;
@@ -76,6 +80,14 @@ const sporsmalText = document.getElementById("sporsmal");
 const antallSporsmalText = document.getElementById("antallSporsmal");
 const forArgumenterText = document.getElementById("forArgumenter");
 const motArgumenterText = document.getElementById("motArgumenter");
+
+function sprokFinder() {
+  if (window.location.pathname = "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
+    sporsmal = sporsmalNorsk;
+  } else {
+    sporsmal = sporsmalDE;
+  }
+}
 
 // randomize questions and check if the question has already been randomized
 function randomSporsmal() {
@@ -197,11 +209,16 @@ function svarSide() {
 
 // Checks if the page is fully loaded, and calls the functions
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
+  if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html" || window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/valgomat.html" || window.location.pathname == "/Main/HTML/DE/valgomat.html") {
     nesteSporsmal();
+    if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/valgomat.html" || window.location.pathname == "/Main/HTML/valgomat.html") {
       alert(
         `Husk at du kan ikke svare nøytralt på mer enn ${antallNøytralGanger} av spørsmålene`)
-  } else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/svar.html" || window.location.pathname == "/Main/HTML/svar.html") {
+    } else {
+      alert(`Denk daran, dass du auf nicht mehr als ${antallNøytralGanger} der Fragen neutral antworten kannst`)
+    }
+
+  } else if (window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/svar.html" || window.location.pathname == "/Main/HTML/svar.html" || window.location.pathname == "/Valgomat-demokrati-samfunnsfag/Main/HTML/DE/svar.html" || window.location.pathname == "/Main/HTML/DE/svar.html") {
     svarSide();
   }
 });
