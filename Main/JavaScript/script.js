@@ -221,6 +221,12 @@ function nesteSporsmal(button) {
     if (nøytralButton < antallNøytralGanger) {
       document.getElementsByClassName("noytralButton")[0].disabled = false;
     }
+
+    if (!svarArray[sporsmalNummer - 1]) {
+      svarArray[sporsmalNummer - 1] = 0;
+    }
+    console.log(svarArray)
+
   }
 
   // If the user has answered all the questions, they get redirected to the svar.html page
@@ -237,6 +243,7 @@ function nesteSporsmal(button) {
     document.getElementById("forOgMotArgumenterLink").remove();
     document.getElementsByClassName("forOgMotArgumenterDiv")[0].remove();
     antallSporsmalText.remove();
+
 
     for (let i = 0; i < svarArray.length; i++) {
       svar += svarArray[i];
